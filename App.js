@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
-const MyComponent = React.memo(({ data }) => {
-  const processedData = useMemo(() => processData(data), [data]);
+const MyComponent = ({ data }) => {
+  const processedData = processData(data);
 
   return <div>{processedData}</div>;
-});
+};
 
 // Example function to process data
 const processData = (data) => {
@@ -15,6 +15,4 @@ const App = () => {
   return <MyComponent data="Some data" />;
 };
 
-export default    App;   
- 
- 
+export default App;
